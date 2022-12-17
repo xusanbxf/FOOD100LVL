@@ -175,3 +175,65 @@ play.addEventListener('click', function () {
     chekList.style.top = '-100%'
     
 })
+
+
+timer = document.querySelector('.header__timer-extra');
+function number() {
+  timer.innerHTML++;
+  if (timer.innerHTML < 10) {
+    setTimeout(() => {
+      number();
+    }, 100);
+  } else if (timer.innerHTML < 20) {
+    setTimeout(() => {
+      number();
+    }, 90);
+  }else if (timer.innerHTML < 30) {
+    setTimeout(() => {
+        number();
+      }, 80);
+  }
+  else if (timer.innerHTML < 40) {
+    setTimeout(() => {
+        number();
+      }, 70);
+  }
+  else if (timer.innerHTML < 50) {
+    setTimeout(() => {
+        number();
+      }, 60);
+  }else if (timer.innerHTML < 60) {
+    setTimeout(() => {
+        number();
+      }, 50);
+  }else if (timer.innerHTML < 70) {
+    setTimeout(() => {
+        number();
+      }, 40);
+  }else if (timer.innerHTML < 80) {
+    setTimeout(() => {
+        number();
+      }, 30);
+  }else if (timer.innerHTML < 90) {
+    setTimeout(() => {
+        number();
+      }, 20);
+  }else if (timer.innerHTML < 100) {
+    setTimeout(() => {
+        number();
+      }, 10);
+  }
+}
+number();
+const image = document.querySelectorAll('.main__product-info'),
+viewClose = document.querySelector('.view__close'),
+  view = document.querySelector('.view'),
+  viewImg = document.querySelector('.view img');
+for (let i = 0; i < image.length; i++) {
+    image[i].addEventListener('dblclick', function() {
+    view.classList.add('active')
+imageAdd(this);
+});
+}
+viewClose.onclick = () => view.classList.remove('active')
+
